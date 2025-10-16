@@ -9,12 +9,15 @@ $requestUri = $_SERVER["REQUEST_URI"];
 $path = parse_url($requestUri, PHP_URL_PATH);
 
 switch ($path) {
-    case '/api/me':
-        require __DIR__ . '/.../api/users.php';
+    case "/api/me":
+        require dirname(__DIR__) . "/api/me.php";
         break;
 
     default:
          http_response_code(404);
-         echo json_encode(['error' => 'Endpoint not found']);
+         echo json_encode([
+                "status" => "error",
+                "message" => "Endpoint not found"
+            ]);
          break;
 }
