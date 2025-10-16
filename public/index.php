@@ -17,7 +17,7 @@ switch ($path) {
          http_response_code(404);
          echo json_encode([
                 "status" => "error",
-                "message" => "Endpoint not found"
+                "message" => "Endpoint not Found"
             ]);
          break;
 }
