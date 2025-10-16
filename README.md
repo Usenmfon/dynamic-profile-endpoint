@@ -25,10 +25,8 @@ Built entirely with **vanilla PHP**, using native features such as routing, cURL
 
 project/
 │
-├── public/
-│ └── index.php # Router entry point
+└── index.php # Router entry point
 │
-└── api/
 └── me.php # Endpoint logic (fetches cat fact + returns JSON)
 
 ## ⚙️ Setup Instructions
@@ -42,7 +40,7 @@ cd dynamic-profile-endpoint
 
 ### 2. Run project
 ```bash
-php -S localhost:8000 -t public
+php -S localhost:8000
 ```
 
 ### 3. Access the API endpoint
