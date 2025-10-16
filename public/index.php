@@ -9,7 +9,7 @@ $requestUri = $_SERVER["REQUEST_URI"];
 $path = parse_url($requestUri, PHP_URL_PATH);
 
 switch ($path) {
-    case "/api/me":
+    case "/me":
         require dirname(__DIR__) . "/api/me.php";
         break;
 
