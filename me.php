@@ -7,10 +7,6 @@ function getRandomCatFact() {
 
     $req = curl_init($apiUrl);
     curl_setopt($req, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($req, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($req, CURLOPT_TIMEOUT, 10);
-    curl_setopt($req, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($req, CURLOPT_SSL_VERIFYHOST, false);
     $response = curl_exec($req);
     $error = curl_error($req);
     curl_close($req);
