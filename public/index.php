@@ -15,7 +15,7 @@ $path = parse_url($requestUri, PHP_URL_PATH);
 
 switch ($path) {
     case "/me":
-        require dirname(__DIR__) . "api/me.php";
+        require __DIR__ . "api/me.php";
         break;
 
     default:
